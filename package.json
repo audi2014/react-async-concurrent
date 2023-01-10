@@ -67,7 +67,8 @@
     "react"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "lint-staged": {
     "*.(js|jsx|ts|tsx)": "eslint --fix",
