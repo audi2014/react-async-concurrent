@@ -18,7 +18,8 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'lib/main.ts'),
       name: '@audi2014/react-async-concurrent',
-      formats: ['es'],
+      fileName: 'main',
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       // exclude react from dist

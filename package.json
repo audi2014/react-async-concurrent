@@ -1,6 +1,6 @@
 {
   "name": "@audi2014/react-async-concurrent",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is dummy package. This repository was created for exploring github packages functionality",
   "license": "ISC",
   "author": "Artur Perepelitsa <audi2014@gmail.com> (github.com/audi2014)",
@@ -15,16 +15,17 @@
   "exports": {
     ".": {
       "import": "./dist/main.es.js",
-      "require": "./dist/main.umd.js"
+      "require": "./dist/main.cjs.js"
     }
   },
-  "main": "./dist/main.umd.js",
+  "main": "./dist/main.cjs.js",
   "module": "./dist/main.es.js",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc && vite build",
+    "publish": "pnpm publish",
     "lint": "pnpm lint:eslint && pnpm lint:prettier && pnpm lint:package-json && pnpm lint:tsc",
     "lint:eslint": "eslint . --fix",
     "lint:package-json": "prettier-package-json --write",
