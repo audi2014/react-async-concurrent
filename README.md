@@ -1,6 +1,5 @@
 ### react-async-concurrent
 
-
 ## This is dummy package. This repository was created for exploring packages functionality and ci/cd
 
 # DO NOT USE IN PROD!
