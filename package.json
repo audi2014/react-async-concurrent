@@ -1,6 +1,6 @@
 {
   "name": "@audi2014/react-async-concurrent",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "This is dummy package. This repository was created for exploring github packages functionality",
   "license": "MIT",
   "author": "Artur Perepelitsa <audi2014@gmail.com> (github.com/audi2014)",
@@ -34,6 +34,7 @@
     "lint:tsc:watch": "tsc --watch --noEmit",
     "tsc": "tsc"
   },
+  "sideEffects": false,
   "types": "./dist/main.d.ts",
   "peerDependencies": {
     "react": "^16.8.0  || ^17.0.0 || ^18.0.0"
