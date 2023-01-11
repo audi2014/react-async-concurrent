@@ -19,7 +19,7 @@ export default defineConfig({
       entry: resolve(__dirname, 'lib/main.ts'),
       name: '@audi2014/react-async-concurrent',
       fileName: 'main',
-      formats: ['es', 'cjs'],
+      formats: ['es', 'umd'],
     },
     rollupOptions: {
       // exclude react from dist
@@ -38,6 +38,8 @@ export default defineConfig({
       jsxRuntime: 'classic',
     }),
     // export types:
-    dts(),
+    dts({
+      rollupTypes: true,
+    }),
   ],
 });

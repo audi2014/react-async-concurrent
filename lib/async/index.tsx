@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 
-import { AsyncRoot } from './context/AsyncRoot';
-import { contextAsync } from './context/contextAsync';
+import { AsyncRoot } from '../context/AsyncRoot';
+import { contextAsync } from '../context/contextAsync';
 import { PromiseFn, PropsType, StateType } from './types';
 
 export const Async = <TaskResult,>({

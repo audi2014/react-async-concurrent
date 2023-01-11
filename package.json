@@ -1,6 +1,6 @@
 {
   "name": "@audi2014/react-async-concurrent",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "This is dummy package. This repository was created for exploring github packages functionality",
   "license": "ISC",
   "author": "Artur Perepelitsa <audi2014@gmail.com> (github.com/audi2014)",
@@ -14,18 +14,18 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/main.es.js",
-      "require": "./dist/main.cjs.js"
+      "import": "./dist/main.mjs",
+      "require": "./dist/main.umd.mjs"
     }
   },
-  "main": "./dist/main.cjs.js",
-  "module": "./dist/main.es.js",
+  "main": "./dist/main.umd.js",
+  "module": "./dist/main.mjs",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc && vite build",
-    "publish": "pnpm publish",
+    "build:publish": "tsc && vite build && pnpm publish",
     "lint": "pnpm lint:eslint && pnpm lint:prettier && pnpm lint:package-json && pnpm lint:tsc",
     "lint:eslint": "eslint . --fix",
     "lint:package-json": "prettier-package-json --write",
@@ -34,7 +34,7 @@
     "lint:tsc:watch": "tsc --watch --noEmit",
     "tsc": "tsc"
   },
-  "typings": "./dist/main.d.ts",
+  "types": "./dist/main.d.ts",
   "peerDependencies": {
     "react": "^16.8.0  || ^17.0.0 || ^18.0.0"
   },
