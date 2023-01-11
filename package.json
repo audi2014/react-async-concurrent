@@ -1,6 +1,6 @@
 {
   "name": "@audi2014/react-async-concurrent",
-  "version": "1.0.7-alpha.0",
+  "version": "1.0.7-alpha.1",
   "description": "This is dummy package. This repository was created for exploring github packages functionality",
   "license": "MIT",
   "author": "Artur Perepelitsa <audi2014@gmail.com> (github.com/audi2014)",
@@ -15,14 +15,11 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/main.js",
-      "require": "./dist/main.umd.js",
-      "default": "./dist/main.js"
+      "import": "./dist/es/main.js",
+      "require": "./dist/cjs/main.js"
     }
   },
-  "main": "./dist/main.umd.js",
-  "module": "./dist/main.js",
+  "main": "./dist/es/main.js",
   "files": [
     "dist"
   ],
