@@ -4,6 +4,7 @@ import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
 // https://vitejs.dev/guide/build.html#library-mode
+// https://onderonur.netlify.app/blog/creating-a-typescript-library-with-vite/
 export default defineConfig({
   resolve: {
     // allow absolute path imports. see tsconfig.json compilerOptions.paths
@@ -18,8 +19,8 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'lib/main.ts'),
       name: '@audi2014/react-async-concurrent',
-      formats: ['es', 'cjs'],
-      fileName: (format) => `${format}/main.js`,
+      formats: ['cjs'],
+      fileName: (format) => `main.${format}.js`,
     },
     rollupOptions: {
       // exclude react from dist
