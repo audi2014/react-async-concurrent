@@ -1,0 +1,32 @@
+{
+  "name": "@audi2014/react-async-concurrent",
+  "version": "1.0.52",
+  "description": "This is dummy package. This repository was created for exploring github packages functionality",
+  "license": "MIT",
+  "author": "Artur Perepelitsa <audi2014@gmail.com> (github.com/audi2014)",
+  "homepage": "https://github.com/audi2014/react-async-concurrent#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/audi2014/react-async-concurrent"
+  },
+  "bugs": {
+    "url": "https://github.com/audi2014/react-async-concurrent/issues"
+  },
+  "type": "module",
+  "module": "./index.js",
+  "sideEffects": false,
+  "types": "./index.d.ts",
+  "peerDependencies": {
+    "react": "^16.8.0  || ^17.0.0 || ^18.0.0"
+  },
+  "keywords": [
+    "async",
+    "concurrent",
+    "promise",
+    "react"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

@@ -1,49 +1,22 @@
 {
-  "name": "@audi2014/react-async-concurrent",
-  "version": "1.0.20",
-  "type": "module",
-  "description": "This is dummy package. This repository was created for exploring github packages functionality",
-  "license": "MIT",
-  "author": "Artur Perepelitsa <audi2014@gmail.com> (github.com/audi2014)",
-  "homepage": "https://github.com/audi2014/react-async-concurrent#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/audi2014/react-async-concurrent"
-  },
-  "bugs": {
-    "url": "https://github.com/audi2014/react-async-concurrent/issues"
-  },
-  "exports": {
-    ".": {
-      "import": "./dist/main.cjs.js",
-      "require": "./dist/main.cjs.js"
-    }
-  },
-  "main": "./dist/main.cjs.js",
-  "module": "./dist/main.cjs.js",
-  "files": [
-    "dist",
-    "lib"
-  ],
   "scripts": {
     "build": "tsc && vite build",
-    "build:publish": "tsc && vite build && npm publish",
+    "build:pack": "tsc && vite build && cd dist && pnpm pack",
+    "build:publish": "tsc && vite build && cd dist && npm publish",
     "lint": "pnpm lint:eslint && pnpm lint:prettier && pnpm lint:package-json && pnpm lint:tsc",
     "lint:eslint": "eslint . --fix",
-    "lint:package-json": "prettier-package-json --write",
+    "lint:package-json": "prettier-package-json --write ./package.dist.json && prettier-package-json --write ./package.json",
     "lint:prettier": "prettier --write .",
     "lint:tsc": "tsc --noEmit",
     "lint:tsc:watch": "tsc --watch --noEmit",
+    "pack": "cd dist && pnpm pack",
     "tsc": "tsc"
   },
-  "types": "./dist/main.d.ts",
-  "typings": "./dist/main.d.ts",
-  "peerDependencies": {
-    "react": "^16.8.0  || ^17.0.0 || ^18.0.0"
-  },
   "devDependencies": {
+    "@types/glob": "^8.0.0",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
+    "@types/rollup-plugin-generate-package-json": "^3.2.0",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
     "@vitejs/plugin-react": "^3.0.1",
@@ -55,29 +28,30 @@
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^8.0.0",
+    "glob": "^8.0.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.2",
     "prettier-package-json": "^2.8.0",
     "prettier-plugin-sort-json": "^1.0.0",
+    "rollup-plugin-generate-package-json": "^3.2.0",
     "typescript": "^4.9.4",
     "vite": "^4.0.4",
-    "vite-plugin-dts": "^1.7.1"
-  },
-  "keywords": [
-    "async",
-    "concurrent",
-    "promise",
-    "react"
-  ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "vite-plugin-dts": "^1.7.1",
+    "vite-plugin-static-copy": "^0.13.0"
   },
   "lint-staged": {
     "*.(js|jsx|ts|tsx)": "eslint --fix",
     "*.(css|sass|scss|md)": "prettier --write",
-    "package.json": "prettier-package-json --write"
+    "package.json": "prettier-package-json --write",
+    "package.dist.json": "prettier-package-json --write"
   },
-  "packageManager": "pnpm@7.20.0"
+  "packageManager": "pnpm@7.20.0",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "rollup"
+      ]
+    }
+  }
 }
