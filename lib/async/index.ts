@@ -1,2 +1,2 @@
-export { Async } from './Async';
+export * from './Async';
 export * from './types';

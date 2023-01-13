@@ -1,3 +1,3 @@
-export { AsyncRoot } from './AsyncRoot';
-export { contextAsync } from './contextAsync';
+export * from './AsyncRoot';
+export * from './contextAsync';
 export * from './types';

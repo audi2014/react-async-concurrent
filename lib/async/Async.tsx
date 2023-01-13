@@ -108,5 +108,3 @@ export const Async = <TaskResult,>({
 
   return null;
 };
-
-export default Async;
