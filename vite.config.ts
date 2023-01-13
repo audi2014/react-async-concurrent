@@ -78,6 +78,10 @@ export default defineConfig({
           dest: './',
         },
         {
+          src: ['./README.md', 'LICENSE'],
+          dest: './',
+        },
+        {
           // set package.json for npm
           // https://webpack.js.org/guides/package-exports/
           src: './package.dist.json',
