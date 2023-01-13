@@ -1,3 +1,26 @@
+# Subpath imports support:
+
+### requirements:
+
+1. Should works with require api end imports
+2. Idea autocomplete should works
+3. TS support
+
+```ts
+// require cjs
+const main = require('@audi2014/react-async-concurrent');
+const lvl2 = require('@audi2014/react-async-concurrent/lvl1/lvl2');
+main.lvl1file()
+main.lvl2.lvl2file()
+lvl2.lvl2file()
+
+// import js (esm modules)
+import * as main from '@audi2014/react-async-concurrent';
+import * as lvl2 from '@audi2014/react-async-concurrent/lvl1/lvl2';
+main.lvl1file()
+main.lvl2.lvl2file()
+lvl2.lvl2file()
+```
 # Modern way to support subpath imports:
 
 ```json5
