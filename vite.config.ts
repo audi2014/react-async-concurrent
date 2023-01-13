@@ -22,7 +22,7 @@ export default defineConfig({
     ],
   },
   build: {
-    minify: false,
+    minify: true,
     lib: {
       // include independent modules https://github.com/vitejs/vite/discussions/8098
       entry: glob.sync(path.resolve(__dirname, entriesMask)),
